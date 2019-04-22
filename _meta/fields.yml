@@ -1,0 +1,9 @@
+- key: vsftpd
+  title: "vsftpd"
+  description: >
+    vsftpd Module
+  fields:
+    - name: vsftpd
+      type: group
+      description: >
+      fields:

@@ -1,0 +1,3 @@
+dashboards:
+- id: Filebeat-vsftpd-log-Dashboard
+  file: Filebeat-vsftpd-log.json

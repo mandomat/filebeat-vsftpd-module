@@ -1,0 +1,21 @@
+{
+	"description": "Pipeline for parsing vsftpd log logs",
+	"processors": [{
+		"grok": {
+			"field": "message",
+			"patterns": [
+				"%{DATESTAMP:date} \\[pid %{NUMBER:vsftpd.log.pid}\\].*?%{WORD:vsftpd.log.status}? %{WORD:vsftpd.log.action}: Client \"%{IP:vsftpd.log.ip}\",? %{GREEDYDATA:vsftpd.log.info}"
+			],
+			"pattern_definitions": {
+				"DATESTAMP": "%{DAY} %{MONTH} %{MONTHDAY} %{TIME} %{YEAR}"
+			}
+		}
+	}],
+	"on_failure": [{
+		"set": {
+			"field": "error.message",
+			"value": "{{ _ingest.on_failure_message }}"
+		}
+	}]
+}
+

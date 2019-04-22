@@ -1,0 +1,27 @@
+- name: date
+  description: Please add description
+  example: Please add example
+- name: log
+  description: Please add description
+  example: Please add example
+  type: group
+  fields:
+  - name: pid
+    description: Please add description
+    example: Please add example
+    type: long
+  - name: status
+    description: Please add description
+    example: Please add example
+    type: keyword
+  - name: action
+    description: Please add description
+    example: Please add example
+    type: keyword
+  - name: ip
+    description: Please add description
+    example: Please add example
+  - name: info
+    description: Please add description
+    example: Please add example
+    type: text
