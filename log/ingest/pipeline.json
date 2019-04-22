@@ -4,7 +4,7 @@
 		"grok": {
 			"field": "message",
 			"patterns": [
-				"%{DATESTAMP:date} \\[pid %{NUMBER:vsftpd.log.pid}\\].*?%{WORD:vsftpd.log.status}? %{WORD:vsftpd.log.action}: Client \"%{IP:vsftpd.log.ip}\",? %{GREEDYDATA:vsftpd.log.info}"
+				"%{DATESTAMP:vsftpd.log.date} \\[pid %{NUMBER:vsftpd.log.pid}\\].*?%{WORD:vsftpd.log.status}? %{WORD:vsftpd.log.action}: Client \"%{IP:vsftpd.log.ip}\",? %{GREEDYDATA:vsftpd.log.info}"
 			],
 			"pattern_definitions": {
 				"DATESTAMP": "%{DAY} %{MONTH} %{MONTHDAY} %{TIME} %{YEAR}"
